@@ -22,8 +22,9 @@ void pattern1 (int n){
     }
 }
 int main(){
-
-   int n=5;
+    int n;
+   cout<<"enter the number of rows you would like : "<<endl;
+   cin>>n;
     pattern1(n);
 
     return 0;
