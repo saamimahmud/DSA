@@ -1,5 +1,5 @@
 /*
-QUESTION-> print the following pattern :
+QUESTION print the following pattern :
 
 * 
 * *

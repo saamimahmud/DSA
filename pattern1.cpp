@@ -1,4 +1,5 @@
 /*
+QUESTION-> print the following pattern :
 
 pattern 1:
 * * * * * 

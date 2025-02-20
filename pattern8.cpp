@@ -1,3 +1,14 @@
+/*
+QUESTION-> create the following pattern :
+
+*********
+ *******
+  *****
+   ***
+    *
+
+*/
+
 #include<iostream>
 using namespace std;
 
@@ -6,8 +17,8 @@ void pattern8(int n){
         for(int j=0;j<i;j++){
         cout<<" ";
     }
-        for(int k=1;k<=2*n-(2*i+1);k++){
-            cout<<"* ";
+        for(int k=0;k<2*n-(2*i+1);k++){
+            cout<<"*";
         }
         cout<<endl;
     }
