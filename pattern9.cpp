@@ -1,3 +1,21 @@
+/*
+QUESTION-> create the following pattern :
+
+    *
+   ***
+  *****
+ *******
+*********
+*********
+ *******
+  *****
+   ***
+    *
+    
+    
+
+*/
+
 #include<iostream>
 using namespace std;
 
