@@ -11,13 +11,16 @@ QUESTION-> create the following pattern :
 using namespace std;
 
 void pattern12(int n){
-    int m=1;
+    int start=1;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=i;j++){
             if(i%2==0){
-                
+                start=0;
             }
-            cout<<m;
+            else{
+                start=1;
+            }
+            cout<<start;
         }
         cout<<endl;
     }
