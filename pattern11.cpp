@@ -1,7 +1,11 @@
 /*
 QUESTION-> create the following pattern :
 
-
+1
+01
+101
+0101
+10101
     
     
 
