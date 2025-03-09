@@ -11,7 +11,6 @@ int count_digits(int n){
     return count;
 }
 int main(){
-    int p=count_digits(2354);
-    cout<<"Number of digits == "<<p;
+    cout<<"Number of digits == "<<count_digits(2354);;
     return 0;
 }
