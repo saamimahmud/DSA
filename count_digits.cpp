@@ -6,11 +6,13 @@ int count_digits(int n){
         
         n=n/10;
         count=count+1;
-
     }
     return count;
 }
 int main(){
-    cout<<"Number of digits == "<<count_digits(2354);;
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+    cout<<"Number of digits == "<<count_digits(n);;
     return 0;
 }
