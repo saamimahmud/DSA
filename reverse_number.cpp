@@ -1,5 +1,6 @@
 /*
-Reverse a number and dont print 0
+Reverse a number and if the number is 10400 then its reverse
+should be 401.
 
 */
 
