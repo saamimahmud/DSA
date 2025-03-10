@@ -1,14 +1,16 @@
 #include<iostream>
 using namespace std;
 
-void palindrome(int n){
+void palindrome(int n,int rev_num){
     int last_digit;
-    int rev_num=0;
+    int t=n;
     while(n>0){
         last_digit=n%10;
         rev_num=rev_num*10+last_digit;
+        n=n/10;
     }
-    if(last_digit==n){
+    cout<<"its reverse is : "<<rev_num<<endl;
+    if(rev_num==t){
         cout<<"The number is a palindrome..."; }
     else{
         cout<<"The number is not a palindrome...";  }
@@ -16,8 +18,10 @@ void palindrome(int n){
 
 int main(){
     int n;
-    cout<<"Enter the number to be cheked for palindrome : ";
+    int rev_num=0;
+    cout<<"Enter the number to be cheked for palindrome : "<<endl;
     cin>>n;
+    palindrome(n,rev_num);
     
 
     return 0;
