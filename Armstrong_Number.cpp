@@ -1,3 +1,6 @@
+/*
+Check if a number is Armstrong Number or not
+*/
 #include<iostream>
 using namespace std;
 auto n_From_User(){
