@@ -1,26 +1,17 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
 int main (){
-    int n=35;
-    int t=n;
-    int last_digit;
-    int Is_divisble;
-    int count=0;
-    cout<<" n == "<<n<<endl;
-while(n!=0){
-    
-    last_digit=n%10;
-    cout<<"last_digit == "<<last_digit<<endl;
-    Is_divisble=t%last_digit;
-    cout<<" Is_divisble == "<<Is_divisble;
-    if(Is_divisble==0){
-        count=count+1;
-    }
-    n=n/10;
-    cout<<" n == "<<n;
-    cout<<" count == "<<count;
+vector<int> v(5);
+v.push_back(2);
+v.push_back(2);
+v.push_back(2);
+v.push_back(2);
+v.push_back(2);
+v.emplace_back(7);
 
-            }
+
+
 
 
     return 0;
