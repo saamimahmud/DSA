@@ -5,6 +5,7 @@ GCD Brute Force Method
 #include<iostream>
 using namespace std;
 //brute force method
+//TC -> O(min(a,b))
 void GCD(int a,int b){
     int gcd=0;
     for(int i=1;i<=min(a,b);i++){
@@ -15,6 +16,7 @@ void GCD(int a,int b){
     cout<< gcd<<endl;   
 }
 //better approach
+//TC -> O(min(a,b))
 void GCD2(int a,int b){
     for(int i=min(a,b);i>=1;i--){
         int gcd=0;
@@ -27,6 +29,7 @@ void GCD2(int a,int b){
 }
 //optimal approach
 // using euclideon algorithm also insted of gcd(a,b)=gcd(a-b,b)........ we will do Greater%Smaller.
+//TC => O(logphi(min(a,b)))
 void GCD3(int a,int b){
     int gcd=0;
     while(a!=0&&b!=0){
