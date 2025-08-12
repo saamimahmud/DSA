@@ -1,20 +1,20 @@
 //Print something n times using recursion;
 #include<iostream>
 using namespace std;
-int count=0;
-void fn(){
+
+void fn(int count){
     if(count==13){
         return;
     }
     else{
 cout<<count<<endl;
 count++;
-fn();
+fn(count);
     }
 }
 int main(){
-
-fn();
+    int count=0;
+fn(count);
 
     return 0;
 }
