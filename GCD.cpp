@@ -5,14 +5,14 @@ GCD Brute Force Method
 #include<iostream>
 using namespace std;
 //brute force method
-int GCD(int a,int b){
+void GCD(int a,int b){
     int gcd=0;
     for(int i=1;i<=min(a,b);i++){
         if(a%i==0&&b%i==0){
             gcd=i;
         }
     }
-    return gcd;   
+    cout<< gcd<<endl;   
 }
 //better approach
 void GCD2(int a,int b){
@@ -20,33 +20,35 @@ void GCD2(int a,int b){
         int gcd=0;
         if(a%i==0&&b%i==0){
             gcd=i;
-            cout<<gcd;
+            cout<<gcd<<endl;
             break;
         }
     }
 }
 //optimal approach
+// using euclideon algorithm also insted of gcd(a,b)=gcd(a-b,b)........ we will do Greater%Smaller.
 void GCD3(int a,int b){
     int gcd=0;
-    int left_var;
-    int right_var;
-    int result;
-    left_var=max(a,b);
-    right_var=min(a,b);
     while(a!=0&&b!=0){
-        
-        a=max(a,b)-min(a,b);
-        b=min(a,b);
+        if(a>b){//a=52,b=10
+            a=a%b;//a=52%10=>a=2
+        }
+        else{
+            b=b%a;//b=10%2=b=0
+        }
     }
-    cout<<a,b;
+    if(b==0){
+        cout<<a<<endl;
+    }
+    if(a==0){
+        cout<<b<<endl;
+    }
+   
 }
 int main(){
-    int a=5;
-    int b=25;
-    int result = GCD(a,b);
-    cout<<result<<endl;
+    GCD(52,10);
     GCD2(25,5);
-    GCD3(25,5);
-    return 0;
+    GCD3(52,10);
+return 0;
 }
 
