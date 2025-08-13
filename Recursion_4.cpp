@@ -6,8 +6,8 @@ using namespace std;
 void fn(int n){
 if(n>=0){
     cout<<n<<endl;
-    n--;
-    fn(n);
+    
+    fn(n-1);
 }
 }
 
