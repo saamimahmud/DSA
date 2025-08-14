@@ -29,6 +29,17 @@ void Reverse_Array1(int arr[],int n){
     p2--;
    }
 }
+void Reverse_Array2(int arr[],int start,int end){
+    //Recursive method
+    int store=0;
+    if(start<=end&&end>=start){
+    store=arr[start];
+    arr[start]=arr[end];
+    arr[end]=store;
+    Reverse_Array2(arr,start+1,end-1);
+
+    }
+}
 
 int main(){
     int n=5;
@@ -36,7 +47,8 @@ int main(){
     Print_Array(arr,n);
     cout<<endl;
    // Reverse_Array(arr,n);
-    Reverse_Array1(arr,n);
+    //Reverse_Array1(arr,n);
+    Reverse_Array2(arr,0,n-1);
     Print_Array(arr,n);
     return 0;
 
