@@ -7,7 +7,7 @@ int start=0;
 int end= s.length()-1;
     while (start<=end&&end>=start)
     {
-        if(s[start]==s[end]){
+        if(tolower(s[start])==tolower(s[end])){
             
             start++;
             end--;
