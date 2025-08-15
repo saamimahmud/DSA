@@ -31,6 +31,44 @@ string CheckPalindrome_rec(string s,int start,int end){
     }
     return "The input string is a palindrome.";
 }
+/*My Leetcode solution......which works for these test cases :
+Example 1:
+Input: s = "A man, a plan, a canal: Panama"
+
+Example 2:
+Input: s = "race a car"
+
+Example 3:
+Input: s = " "
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
+       int start=0;
+       int end=s.length()-1;
+       
+        while(start<=end&&end>=start){
+            if(s==" "){
+                return true;
+            }
+            if(!isalnum(s[start])){
+                start++;
+            }
+            else if(!isalnum(s[end])){
+                end--;
+            }
+            else if(tolower(s[start])==tolower(s[end])){
+                start++;
+                end--;
+            }
+            else{
+                return false;
+            }
+        }
+        return true;
+    }
+};
+*/
 
 
 
