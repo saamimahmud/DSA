@@ -23,7 +23,7 @@ void PrintSeries(int arr[],int x){
 }
 void Fib_Rec(int x,int p1,int p2,int count){
     
-    
+    //T.C-> O(x)
    int p3=p1+p2;
    if (p1==0&&p2==1){
     cout<<p1;
