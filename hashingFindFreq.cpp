@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 using namespace std;
 
 
@@ -13,11 +14,9 @@ cout<<"Enter the elements  : "<<endl;
 for(int i=0;i<=n;i++){
     cin>>arr[i];
 }
-int hash[100]={0};
+map<int,int> mpp;
 for(int i=0;i<=n;i++){
-    hash[arr[i]]+=1;
+    mpp[arr[i]]+=1;
 }
-
-
     return 0;
 }
