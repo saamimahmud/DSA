@@ -1,8 +1,9 @@
 #include<iostream>
 #include<map>
 using namespace std;
-
-
+//always when using maps try to first try with unordered map because it has the best case T.C of O(1) and map has T.C of log(n) for all cases.
+//worst case of unordered map is O(n) and it is due to COLLISIONS ( that is all the elements have been stored at the same hash index and it has become a quite long chain.)
+//works for both int and char: just change int arr[n] -> char[n]; and int ask; -> char ask;
     
 
 int main(){
