@@ -2,7 +2,8 @@
 using namespace std;
 //Bubble Sort;
 //N = 6, array[] = {13,46,24,52,20,9}
-//T.C -> O(n*n)
+//T.C -> O(n*n) |||| to better its T.C we can add a condition that if the first iteration goes without any swapping that means the array is already sorted.
+// giving a T.c of O(n),
 void bubbleSort(int n,int arr[]){
 int count =0;
     for(int i=n-1;i>=0;i--){
@@ -10,10 +11,12 @@ int count =0;
         {
             if(arr[j]<arr[j-1]){
                 swap(arr[j],arr[j-1]);
-
+                count ++;
             }
         }
-        
+        if(count ==0){
+            break;
+        }
     }
 }
 
