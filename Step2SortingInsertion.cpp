@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 //{3,15,6,9,2,8}
+//T.C -> O(n*n) and Best T.C is O(n) if array is already sorted;
 
 void insertionSort(int n,int arr[]){
 int j=0;
