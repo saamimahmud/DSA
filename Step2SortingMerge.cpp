@@ -16,18 +16,24 @@ while(left<=mid&&right<=high){
         right++;
     }
 }
-while(left<mid){
-temp.push_back(arr[left]);
+while(left<=mid){
+    temp.push_back(arr[left]);
+    left++;
 }
-while(right<high){
-temp.push_back(arr[right]);
+while(right<=high){
+    temp.push_back(arr[right]);
+    right++;
 }
+for(int i=low;i<=high;i++){
+    arr[i]=temp[i-low];
+}
+
 
 }
 
 
 void MergeSort(vector <int>& arr,int low,int high){
-
+int n=5;
 if(low==high){
     return;
 }
@@ -35,6 +41,7 @@ int mid=(low+high)/2;
 MergeSort(arr,low,mid);
 MergeSort(arr,mid+1,high);
 Merge(arr,low,mid,high);
+
 }
 
 
@@ -58,8 +65,8 @@ int n=5;
 vector<int> arr={5,3,2,6,7};
 MergeSort(arr,0,4);
 cout<<endl;
-for(int i=0;i<n;i++){
-cout<<arr[i]<<" ";
+for(int i=0;i<5;i++){
+    cout<<arr[i]<<" ";
 }
 
     return 0;
