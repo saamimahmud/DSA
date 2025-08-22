@@ -1,7 +1,10 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
+// Code for Merge Sort ;
+//Divide: The array is split in half recursively — this takes log₂(n) steps.
+//Conquer (Merge): Each level of recursion merges all elements ,this takes O(n) time per level.
+//T.C -> O(nlogn)
 void Merge(vector<int>& arr,int low,int mid,int high){
 vector<int> temp;
 int left=low;
@@ -33,7 +36,6 @@ for(int i=low;i<=high;i++){
 
 
 void MergeSort(vector <int>& arr,int low,int high){
-int n=5;
 if(low==high){
     return;
 }
@@ -50,25 +52,20 @@ Merge(arr,low,mid,high);
 
 
 int main(){
-
-/* 
 int n;
 cout<<"Enter the size of array : "<<endl;
 cin>>n;
-vector<int> arr(n);
-cout<<"Enter the elements of the array"<<endl;
+cout<<" Enter the Elements : "<<endl;
+vector<int> arr(n) ;
 for(int i=0;i<n;i++){
-arr.push_back(i);
+    cin>>arr[i];
 }
-*/
-int n=5;
-vector<int> arr={5,3,2,6,7};
-MergeSort(arr,0,4);
-cout<<endl;
-for(int i=0;i<5;i++){
+MergeSort(arr,0,n-1);
+
+
+cout<<"Sorted array : "<<endl;
+for(int i=0;i<n;i++){
     cout<<arr[i]<<" ";
 }
-
     return 0;
-
 }
