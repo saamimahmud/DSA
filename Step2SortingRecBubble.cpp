@@ -7,7 +7,7 @@ if(j<=n-1){
 
     if(arr[j]<arr[j-1]){
         swap(arr[j],arr[j-1]);
-        RecBubble(arr,j++,n);
+        RecBubble(arr,j+1,n);
     }
 RecBubble(arr,k+1,n);
 }
