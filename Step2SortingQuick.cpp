@@ -5,14 +5,24 @@ using namespace std;
 int pIndex(int arr[],int low,int high){
 int i=low;
 int j=high;
-    while()
+int pivot=arr[low];
+    while(i<j){
+        while(arr[i]<=arr[pivot]&&i<=high){
+            i++;
+        }
+
+        while(arr[j]>=arr[pivot]&&j>=low){
+            j--;
+        }
+        swap(arr[i],arr[j]);
+    }
 
 
 }
 
 void QuickSort(int arr[],int low,int high){
 
-int pivot=arr[low];
+
 int pivIndex;
 
 if(low<high){
