@@ -24,9 +24,16 @@ cout<<secLarg;
 
 void SecLargeNumbetter(int arr[],int n,int maxVal){
 int secLarg=INT_MIN;
-    for(int i=0;i<=n-1;i++){
-        if()
+    for(int i=1;i<=n-1;i++){
+        if(arr[i]>maxVal){
+            secLarg=maxVal;
+            maxVal=arr[i]; 
+        }
+        else if(arr[i]<maxVal&&arr[i]>secLarg){
+            secLarg=arr[i];
+        }
     }
+    cout<<secLarg;
 }
 
 
@@ -38,7 +45,7 @@ int arr[]={2,1,6,3,5};
 int n=sizeof(arr)/sizeof(arr[0]);
 int maxVal=arr[0];
 //SecLargNum(arr,n,maxVal);
-
+SecLargeNumbetter(arr,n,maxVal);
 
 
     return 0;
