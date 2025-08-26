@@ -31,6 +31,9 @@ void remDupesSet(vector<int> arr){
 set<int> st;
 int n=arr.size();
 
+for(int i=0;i<n;i++){
+    st.insert(arr[i]);
+}
 
 }
 
