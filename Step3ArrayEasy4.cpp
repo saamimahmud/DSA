@@ -19,13 +19,13 @@ for(int i=0;i<n;i++){
 for(int val:nums){
     cout<<val<<" ";
 }
-cout<<count;
+cout<<"Number of elements in the array after del of dupes : "<<count;
 
 }
 
 
 int main (){
-vector<int> arr={1,2,3,3,4,4,4,4,4,4};
+vector<int> arr={1,2,2,2,2,3,3,4,4,4,4,4,4};
 RemDups(arr);
     return 0;
 }
