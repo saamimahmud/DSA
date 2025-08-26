@@ -1,7 +1,7 @@
 #include<iostream>
 #include <vector>
 using namespace std;
-//Del Dupes
+//Del Dupes in a sorted array and then prints the number of elemnts present in the array 
 vector<int>  RemDups(vector<int> arr){
 int n= arr.size();
 vector<int> nums;
@@ -25,7 +25,7 @@ cout<<count;
 
 
 int main (){
-vector<int> arr={1,2,3,3,4};
+vector<int> arr={1,2,3,3,4,4,4,4,4,4};
 RemDups(arr);
     return 0;
 }
