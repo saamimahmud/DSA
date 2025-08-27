@@ -14,7 +14,7 @@ void print(vector<int> arr){
 vector<int> rotArray(vector<int> arr,int k,string direction){
 int n=arr.size();
 vector<int> temp;
-cout<<n;
+
 //for left rotate
 int j=0;
 if(direction == "left"){
