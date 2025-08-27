@@ -1,6 +1,15 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+
+//f(x)for printing;
+void print(vector<int> arr){
+    for(int val: arr){
+        cout<<val<<" ";
+    }
+}
+
+
 // rotate an array by D places;
 vector<int> rotArray(vector<int> arr,int k,string direction){
 int n=arr.size();
@@ -10,11 +19,12 @@ vector<int> temp;
 int j=0;
 if(direction == "left"){
 for(int i=k;i<n;i++){
-    while (j<=k){
-        temp.push_back(arr[j]);
-        j++;
-    }
     temp.push_back(arr[i]);
+}
+while(j<=k-1){
+    temp.push_back(arr[j]);
+
+j++;
 }
 return temp;
 
@@ -37,7 +47,9 @@ cout<<"Enter the index for rotation of array : "<<endl;
 cin>>k;
 cout<<"Enter the rotation 'right' or 'left' :  "<<endl;
 cin>>direction;
+vector<int> arr={3,7,8,9,10,11};
 
+print(rotArray(arr,k,direction));
 
     return 0;
 }
