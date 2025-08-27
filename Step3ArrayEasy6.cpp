@@ -31,7 +31,7 @@ return temp;
 }
 //for right rotate
 else if(direction=="right"){
-j==0;
+
 for(int i=n-k;i<n;i++){
     temp.push_back(arr[i]);
 }
