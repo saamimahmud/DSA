@@ -44,6 +44,17 @@ return temp;
 }
 }
 
+void reverseArray(vector<int> &arr, int start, int end) {
+ 
+    while(start <end){
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    }
+}
+void rotateArray(vector<int> &arr, int k, string direction) {
+    
+}
 
 int main(){
 string direction;
