@@ -53,7 +53,12 @@ void reverseArray(vector<int> &arr, int start, int end) {
     }
 }
 void rotateArray(vector<int> &arr, int k, string direction) {
-    
+    int n=arr.size();
+
+
+    reverseArray(arr,0,k-1);
+    reverseArray(arr,k,n-1);
+    reverseArray(arr,0,n-1);
 }
 
 int main(){
