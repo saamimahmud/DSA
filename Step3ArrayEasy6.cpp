@@ -43,7 +43,7 @@ j++;
 return temp;
 }
 }
-
+//optimised approach using reversal algorithm
 void reverseArray(vector<int> &arr, int start, int end) {
  
     while(start <end){
@@ -52,6 +52,7 @@ void reverseArray(vector<int> &arr, int start, int end) {
         end--;
     }
 }
+//optimised approach using reversal algorithm
 void rotateArray(vector<int> &arr, int k, string direction) {
     int n=arr.size();
 
