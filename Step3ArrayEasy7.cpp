@@ -25,7 +25,7 @@ void moveZeroes(vector<int>& arr)
 
 void moveZeroesOptimal(vector<int>& arr)
 {
-    int j=0;
+    int j=-1;
     int n=arr.size();
     for(int i=0;i<n;i++){
         if(arr[i]==0){
@@ -33,6 +33,8 @@ void moveZeroesOptimal(vector<int>& arr)
             break;
         }
     }
+    if(j==-1)
+    return;
     for(int i=j+1;i<n;i++){
         if(arr[i]!=0){
             swap(arr[i],arr[j]);
@@ -43,7 +45,7 @@ void moveZeroesOptimal(vector<int>& arr)
 
 
 int main(){
-vector<int> arr={1,2,0,0,3,2,0,2,4};
+vector<int> arr= {1, 0, 2, 3, 2, 0, 0, 4, 5, 1};
 
 moveZeroes(arr);
 for(int val:arr){   
