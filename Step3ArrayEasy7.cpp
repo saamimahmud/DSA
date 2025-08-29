@@ -24,7 +24,7 @@ void moveZeroes(vector<int>& arr)
 //Optimal approach using two pointers
 
 void moveZeroesOptimal(vector<int>& arr)
-{
+{// T.C->
     int j=-1;
     int n=arr.size();
     for(int i=0;i<n;i++){
