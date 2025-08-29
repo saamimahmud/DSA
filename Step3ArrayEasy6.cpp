@@ -56,10 +56,17 @@ void reverseArray(vector<int> &arr, int start, int end) {
 void rotateArray(vector<int> &arr, int k, string direction) {
     int n=arr.size();
 
-
+    if(direction=="left"){
     reverseArray(arr,0,k-1);
     reverseArray(arr,k,n-1);
     reverseArray(arr,0,n-1);
+    print(arr);}
+    else if(direction=="right"){
+        reverseArray(arr,0,n-k-1);
+        reverseArray(arr,n-k,n-1);
+        reverseArray(arr,0,n-1);
+        print(arr);
+    }
 }
 
 int main(){
@@ -73,6 +80,7 @@ vector<int> arr={1,2,3,4,5,6,7};
 //N = 6, array[] = {3,7,8,9,10,11} , k=3 , left 
 //N = 7, array[] = {1,2,3,4,5,6,7} , k=2 , right
 print(rotArray(arr,k,direction));
-
+cout<<endl;
+rotateArray(arr,k,direction);
     return 0;
 }
