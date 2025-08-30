@@ -17,9 +17,10 @@ int linearSearch(vector<int> arr, int num){
 
 int main(){
     vector<int> arr={1,2,3,4,5,6,7,8,9};
-    int num=5;
+    int num;
+    int key=0;
     cout<<"Enter the number to be searched : ";
     cin>>num;
-    linearSearch(arr,num);
-    cout<<linearSearch(arr,num);
+    key=linearSearch(arr,num);
+    cout<<"The number "<<num<<" is at index : "<<key;
 }
