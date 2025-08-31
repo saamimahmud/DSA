@@ -5,8 +5,11 @@ using namespace std;
 int linearSearch(vector<int> arr, int num){
     int n=arr.size();
    for(int i=0;i<n;i++){
-
+    if(arr[i]==num){
+        return i;
+    }
    }
+   return -1;
 }
 int main(){
     vector<int> arr={1,2,3,4,5,6,7,8,9};
