@@ -3,14 +3,10 @@
 using namespace std;    
 //Linear Search
 int linearSearch(vector<int> arr, int num){
-    int i=0;
-    int j=0;
-    while(arr[i]!=num){
-        i++;
-        j=i;
-        
-    }
-    return j;
+    int n=arr.size();
+   for(int i=0;i<n;i++){
+
+   }
 }
 int main(){
     vector<int> arr={1,2,3,4,5,6,7,8,9};
