@@ -27,6 +27,11 @@ int i,j=0;
     while(i!=n1 && j!=n2){
         if(arr1[i]<arr2[j]){
             unionArr.push_back(arr1[i]);
+            i++;
+        }
+        else if(arr2[j]<arr1[i]){
+            unionArr.push_back(arr2[j]);
+            j++;
         }
 
     }
