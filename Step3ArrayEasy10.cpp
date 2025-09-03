@@ -31,6 +31,16 @@ int missingNumber(vector<int>& nums) {
         return 0;
     }
 
+    // Better approach using Hashing ......
+
+    void missingNum2(vector<int> &arr){
+        int n=arr.size();
+        int hash[n+1]={0};
+        for(int i=0;i<n;i++){
+            hash[arr[i]]+=1;
+        }
+    }
+
 int main (){
 vector <int> arr1={1,5,0,3,4};
 
