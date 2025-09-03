@@ -27,13 +27,12 @@ int missingNumber(vector<int>& nums) {
             if(flag!=0){
                 return f+1;
             }
-        
         return 0;
     }
     // Better approach using Hashing ......
     int missingNum2(vector<int> &arr){
         int n=arr.size();
-        int hash[n+1]={0};
+        vector<int> hash(n+1,0);
         for(int i=0;i<n;i++){
             hash[arr[i]]+=1;
         }
