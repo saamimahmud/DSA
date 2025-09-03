@@ -33,12 +33,18 @@ int missingNumber(vector<int>& nums) {
 
     // Better approach using Hashing ......
 
-    void missingNum2(vector<int> &arr){
+    int missingNum2(vector<int> &arr){
         int n=arr.size();
         int hash[n+1]={0};
         for(int i=0;i<n;i++){
             hash[arr[i]]+=1;
         }
+        for(int i=0;i<n;i++){
+            if(hash[i]==0){
+                return i;
+            }
+        }
+        return n;
     }
 
 int main (){
@@ -46,7 +52,8 @@ vector <int> arr1={1,5,0,3,4};
 
 
 cout<<"Missing number is :  "<<missingNumber(arr1);
-
+cout<<endl;
+cout<<"Missing number using hashing is :  "<<missingNum2(arr1);
 
     return 0;
 }
