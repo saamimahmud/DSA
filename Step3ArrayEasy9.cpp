@@ -111,13 +111,15 @@ for(int val: ans)  {
 
 }
 //Optimal approach using two pointers for Intersection of arrays;
+//T.C -> O(n1+n2) & S.C-> O(1);
 void intersectionUsing2Pointers(vector<int> &arr1,vector<int> &arr2){
     int n1=arr1.size();
+    int n2=arr2.size();
     int i=0;
     int j=0;
     vector<int> intersectionAns;
 
-    while(i<n1){
+    while(i<n1&&j<n2){
         if(arr1[i]<arr2[j]){
             i++;
         }
