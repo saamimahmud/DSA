@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std;
 //Find the union of two sorted arrays;
+
+//Brute force method
 void unionOfArrays(vector<int> &arr1,vector<int> &arr2){
     set<int> s;
     for(int val:arr1){
@@ -17,6 +19,19 @@ void unionOfArrays(vector<int> &arr1,vector<int> &arr2){
     }
 }
 
+void unionOfArrays2Pointers(vector <int> &arr1,vector <int> &arr2){
+    int n1=arr1.size();
+    int n2=arr2.size();
+    vector<int> unionArr;
+int i,j=0;
+    while(i!=n1 && j!=n2){
+        if(arr1[i]<arr2[j]){
+            unionArr.push_back(arr1[i]);
+        }
+
+    }
+
+}
 
 int main(){
 vector<int> arr1={1,2,3,4,5};
