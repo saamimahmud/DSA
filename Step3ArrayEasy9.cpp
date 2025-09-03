@@ -19,6 +19,7 @@ void unionOfArrays(vector<int> &arr1,vector<int> &arr2){
     }
 }
 //Optimal approach using two pointers
+//T.C -> O(n1+n2) & S.C-> O(1);
 void unionOfArrays2Pointers(vector <int> &arr1,vector <int> &arr2){
     int n1=arr1.size();
     int n2=arr2.size();
@@ -27,21 +28,25 @@ int i=0,j=0;
     while(i<n1&&j<n2){
         if(arr1[i]<arr2[j]){
          if(i<n1)  { 
-            unionArr.push_back(arr1[i]);
-            i++;}
+            if(unionArr.empty() || unionArr.back()!=arr1[i])
+            {unionArr.push_back(arr1[i]);}
+            i++;
         }
-    
+        }
         if(arr2[j]<arr1[i]){
-            if(j<n2){unionArr.push_back(arr2[j]);
+            
+            if(j<n2)
+            {
+                if(unionArr.empty()|| unionArr.back()!=arr2[j]){
+                unionArr.push_back(arr2[j]);
+            }
             j++;}
         }
-
      if(arr1[i]==arr2[j]){
         
             unionArr.push_back(arr1[i]);
             i++;
             j++;
-        
     }}
     while(i<n1){
         unionArr.push_back(arr1[i]);
@@ -55,11 +60,10 @@ int i=0,j=0;
     for(int val:unionArr){
         cout<<val<<" ";
     }
-
 }
 
 int main(){
-vector<int> arr1={1,2,3,4,5};
+vector<int> arr1={1,1,2,3,3,4,5};
 vector<int> arr2={2,3,4,5,6,7,8,9};
 
     unionOfArrays(arr1,arr2);
