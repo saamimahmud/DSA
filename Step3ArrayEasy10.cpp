@@ -30,6 +30,7 @@ int missingNumber(vector<int>& nums) {
         return 0;
     }
     // Better approach using Hashing ......
+    //T.C-> O(2n);
     int missingNum2(vector<int> &arr){
         int n=arr.size();
         vector<int> hash(n+1,0);
