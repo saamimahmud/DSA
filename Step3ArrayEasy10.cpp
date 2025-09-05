@@ -51,22 +51,23 @@ int missingNum3(vector<int> arr){
     int n=arr.size();
     int sum_n=0;
     int sum=0;
-    int missing_num;
+    
     sum_n=(n*(n+1))/2;
     for(int i=0;i<n;i++){
         sum=sum+arr[i];
     }
-    return missing_num=sum_n-sum;
+    return sum_n-sum;
 }
 
 
 int main (){
-vector <int> arr1={1,5,0,3,4};
+vector <int> arr={1,5,0,3,4};
 
 
-cout<<"Missing number is :  "<<missingNumber(arr1);
+cout<<"Missing number is :  "<<missingNumber(arr);
 cout<<endl;
-cout<<"Missing number using hashing is :  "<<missingNum2(arr1);
-
+cout<<"Missing number using hashing is :  "<<missingNum2(arr);
+cout<<endl;
+cout<<"Missing Num using sum of n is : "<<missingNum3(arr);
     return 0;
 }
