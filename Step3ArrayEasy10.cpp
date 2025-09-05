@@ -49,8 +49,14 @@ int missingNumber(vector<int>& nums) {
 
 int missingNum3(vector<int> arr){
     int n=arr.size();
+    int sum_n=0;
     int sum=0;
-    sum=(n*(n+1))/2;
+    int missing_num;
+    sum_n=(n*(n+1))/2;
+    for(int i=0;i<n;i++){
+        sum=sum+arr[i];
+    }
+    return missing_num=sum_n-sum;
 }
 
 
