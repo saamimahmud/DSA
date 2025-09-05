@@ -45,6 +45,15 @@ int missingNumber(vector<int>& nums) {
         return n;
     }
 
+//Optimal approach using Gauss Formula(sum of N numbers)
+
+int missingNum3(vector<int> arr){
+    int n=arr.size();
+    int sum=0;
+    sum=(n*(n+1))/2;
+}
+
+
 int main (){
 vector <int> arr1={1,5,0,3,4};
 
