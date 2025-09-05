@@ -46,7 +46,8 @@ int missingNumber(vector<int>& nums) {
     }
 
 //Optimal approach using Gauss Formula(sum of N numbers)
-
+//T.C-> O(n);
+//S.C-> O(1);
 int missingNum3(vector<int> arr){
     int n=arr.size();
     int sum_n=0;
