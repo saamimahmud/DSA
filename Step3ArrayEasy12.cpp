@@ -6,6 +6,7 @@ using namespace std;
 
 //brute approach using linear search 
 //T.C-> O(n*n)...
+//S.C-> O(1);;;;
 void func2(vector<int> &nums,int n){
     int count=0;
     for(int i=0;i<n;i++){
@@ -43,7 +44,11 @@ void func1(vector<int> &nums,int n){
 //solutin using hash array
 
 void func(vector<int> &nums,int n){
-    int hashArr[n]={0};
+    int maxi=nums[0];
+for(int i=0;i<n;i++){
+    maxi=max(maxi,nums[i]);
+}
+ int hashArr[maxi]={0};
  for(int i=0;i<n;i++){
     hashArr[nums[i]]+=1;
  }
