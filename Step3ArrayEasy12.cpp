@@ -42,7 +42,8 @@ void func1(vector<int> &nums,int n){
     }
 
 //solutin using hash array
-
+//T.C-> O(3n) & S.C-> O(maxi)
+//For negatives of high power like 10^7 they cannot be handled with hash array so for that we use maps<long long,int>
 void func(vector<int> &nums,int n){
     int maxi=nums[0];
 for(int i=0;i<n;i++){
