@@ -27,7 +27,8 @@ void func2(vector<int> &nums,int n){
 
 
 //solution using unordered maps 
-//T.C-> O(n);
+//T.C-> O(nlog(n/2+1) + n/2+1);
+//S.C-> O(n/2+1)
 void func1(vector<int> &nums,int n){
     unordered_map<int,int> hashArr;
  for(int i=0;i<n;i++){
@@ -61,7 +62,19 @@ for(int i=0;i<n;i++){
 
     }
 
+//Optimal solution using XOR operation;;;;
+//T.C-> O(n)
+//S.C-> O(1)
 
+void func3(vector<int> &nums,int n){
+    int result=0;
+    for(int i=0;i<n;i++){
+        result=result^nums[i];
+    }
+    cout<<result;
+
+
+}
 
 int main(){
     vector<int> nums={3,3,1,2,2,6,6,7,7};
@@ -69,6 +82,6 @@ int main(){
     func(nums,n);
     func1(nums,n);
     func2(nums,n);
-
+    func3(nums,n);
     return 0;
 }
