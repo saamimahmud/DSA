@@ -59,16 +59,35 @@ int missingNum3(vector<int> arr){
     }
     return sum_n-sum;
 }
+// Optimal Solution using XOR ;
+//O(n) slightly better optimal solution;;;;
+int missingNum4(vector<int> arr){
+int xoR1=0;
+int xoR2=0;
+int n=arr.size();
 
+
+for(int i=0;i<n;i++){
+    xoR2=xoR2^arr[i];
+    xoR1=xoR1^(i+1);
+}
+
+return xoR1^xoR2;
+
+
+
+
+}
 
 int main (){
-vector <int> arr={1,5,0,3,4};
-
+vector <int> arr={0,1,2,4,5};
 
 cout<<"Missing number is :  "<<missingNumber(arr);
 cout<<endl;
 cout<<"Missing number using hashing is :  "<<missingNum2(arr);
 cout<<endl;
 cout<<"Missing Num using sum of n is : "<<missingNum3(arr);
+cout<<endl;
+cout<<missingNum4(arr);
     return 0;
 }
