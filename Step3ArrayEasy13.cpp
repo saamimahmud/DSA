@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-
+#include<map>
 using namespace std;
 
 /*
@@ -47,6 +47,20 @@ int len=0;
         
     }
     cout<<len;
+}
+
+//Better approach using HashMap;
+
+void longSubArr2(vector<int> arr,long long k){
+int n=arr.size();
+map <long long, int> hashMap;
+int len=0;
+long long sum=0;
+
+for(int i=0;i<n;i++){
+sum=sum+arr[i];
+}
+
 }
 
 
