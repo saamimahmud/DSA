@@ -50,7 +50,7 @@ int len=0;
 }
 
 //Better approach using HashMap;
-
+//T.C-> O(NlogN) ....if we use unordered maps then -> O(N*1) || O(N*N).....
 int longSubArr2(vector<int> arr,long long k){
 int n=arr.size();
 map <long long, int> hashMap;
