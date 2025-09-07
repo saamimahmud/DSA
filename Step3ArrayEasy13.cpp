@@ -51,6 +51,8 @@ int len=0;
 
 //Better approach using HashMap;
 //T.C-> O(NlogN) ....if we use unordered maps then -> O(N*1) || O(N*N).....
+// S.C-> O(N);
+// This is the optimal solution if the array contains positives and negatives;;;;
 int longSubArr2(vector<int> arr,long long k){
 int n=arr.size();
 map <long long, int> hashMap;
