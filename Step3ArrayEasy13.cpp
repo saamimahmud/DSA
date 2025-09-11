@@ -2,7 +2,6 @@
 #include<vector>
 #include<map>
 using namespace std;
-
 /*
 ............................................Longest Subarray with given Sum K(Positives).....................................
 Input Format: N = 5, k = 10, array[] = {2,3,5,1,9}
@@ -77,7 +76,22 @@ hashMap[sum]=i;
 
 }
 return maxLen;
+}
 
+//Optimal approach using 2 pointers;
+
+void longSubArr3(vector<int> &arr,int k){
+int i=0;
+int j=0;   
+int sum=arr[0]; 
+int len=0;
+int maxLen=0;
+int n=arr.size();
+    while(j<n){
+        sum=sum+arr[i];
+
+    }
+    cout<<maxLen;
 }
 
 
@@ -99,5 +113,6 @@ cin>>key;
 longSubArr(nums,key);
 longSubArr1(nums,key);
 cout<<"The longest subarray is of length : "<<longSubArr2(nums,key);
+longSubArr3(nums,key);
     return 0;
 }
