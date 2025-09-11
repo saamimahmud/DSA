@@ -84,11 +84,22 @@ void longSubArr3(vector<int> &arr,int k){
 int i=0;
 int j=0;   
 int sum=arr[0]; 
-int len=0;
 int maxLen=0;
 int n=arr.size();
-    while(j<n){
+//Here left pointer is j and right pointer is i.......
+    while(i<n){
+        
+        while(j<=i && sum>k){
+            sum=sum-arr[j];
+            j++;
+        }
+
+    if (sum==k){
+        maxLen=max(i-j+1,maxLen);
+    }
+        i++;
         sum=sum+arr[i];
+        
 
     }
     cout<<maxLen;
