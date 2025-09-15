@@ -3,7 +3,36 @@
 using namespace std;
 
 
+//Optimal approach using 3 pointers
+//DUTCH NATIONAL FLAG ALGORITHM....
+//T.C-> O(N) & S.C -> O(1)...
+void sortNew012(vector<int> &a){
+int n=a.size();
+int mid=0;
+int low=0;
+int high=n-1;
+    while(mid<=high){
+        if(a[mid]==0){
+            swap(a[mid],a[low]);
+            low++;
+            mid++;
+        }
+        else if(a[mid]==1){
+            mid++;
+        }
+        else{
+            swap(a[mid],a[high]);
+            {
+                high--;
+            }
+        }
 
+    }
+    
+}
+
+
+// Better approach
 void sort012(vector<int> &nums){
 int cnt0=0;
 int cnt1=0;
@@ -35,11 +64,15 @@ for(int i=cnt1+cnt0;i<n;i++){
 
 int main(){
 vector<int> arr={2,2,0,1,1,0};
-sort012(arr);
+//sort012(arr);
 for(int val:arr){
     cout<<val<<" ";
 }
-
+cout<<endl;
+sortNew012(arr);
+for(int val:arr){
+    cout<<val<<" ";
+}
 
 
     return 0;
