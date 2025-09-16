@@ -30,14 +30,29 @@ void kadane_1 (vector<int> &nums){
 //S.C->O(1)...
 void kadaneOPT(vector<int> &nums){
    int n=nums.size();
+    int start=-1;
+    int end=-1;
     int sum=nums[0];
     int maxSum=nums[0];
+    int tempStart=0;
+for(int i=1;i<n;i++){
+    if(sum+nums[i]<nums[i]){
+        sum=nums[i];
+        tempStart=i;
 
-for(int i=0;i<n;i++){
-    sum=max(nums[i],sum+nums[i]);
-    maxSum=max(sum,maxSum);
+    }
+    else{
+        sum=sum+nums[i];
+    }
+    if(sum>maxSum){
+        maxSum=sum;
+        start=tempStart;
+        end=i;
+    }
 }
-cout<< maxSum;
+cout<<"Max Sum : " <<maxSum<<endl;
+cout<<" Subarray indices : ["<<start<<", "<<"]"<<endl;
+
 }
 
 
