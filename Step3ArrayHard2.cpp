@@ -3,7 +3,6 @@
 #include<iostream>
 #include<vector>
 #include<unordered_map>
-#include<set>
 using namespace std;
 
 //Better Solution using Hashing
@@ -23,11 +22,44 @@ return temp;
 
 }
 
+//Brute force Solution 
+//T.C-> O(N*N)  and S.C-> O(N)
+vector<int> func2(vector<int> nums){
+    int n=nums.size();
+    int count;
+    vector<int> temp;
+    for(int i=0;i<n;i++){
+        count=0;
+        for(int j=0;j<n;j++){
+            if(nums[i]==nums[j]){
+                count++;
+            }
+            if(count==n/3+1){
+                bool alreadyAdded= false;
+                for(int k=0;k<temp.size();k++){
+                    if(nums[i]==temp[k]){
+                        alreadyAdded=true;
+                    }
+                }
+                if(!alreadyAdded)
+                {temp.push_back(nums[i]);
+                }
+            }
+        }
+    }
+    return temp;
+}
+
 
 int main(){
-vector<int> arr={1,2};
+vector<int> arr={2,2};
 vector<int> res=func(arr);
 for(int val: res){
+    cout<<val<<" ";
+}
+cout<<endl;
+vector<int> res1=func2(arr);
+for(int val: res1){
     cout<<val<<" ";
 }
 
