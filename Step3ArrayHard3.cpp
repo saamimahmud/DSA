@@ -7,7 +7,7 @@ using namespace std;
 
 
 //Brute Force solution
-//T.C-> O(n^3) & S.C->O(K) , where k is the number of unique triplets;
+//T.C-> O(n^3 * log(k)) & S.C->2*O(K) , where k is the number of unique triplets; & lo(k)because we are using set data structure and inserting in it .
  void threeSum(vector<int> &nums) {
         int n=nums.size();
         vector<vector<int>> result;
