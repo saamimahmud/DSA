@@ -33,6 +33,31 @@ using namespace std;
         
     }
 
+    //Better solution using hashing :
+//T.C-> O(N^2*log(M))
+//S.C-> O(N)+O(num of unique elements)*2...
+vector<vector<int>> threesumBetter(vector<int> &nums){
+    int n= nums.size();
+set<vector<int>> st;
+int third=0;
+    for(int i=0;i<n;i++){
+        set<int> hash;
+        for(int j=i+1;j<n;j++){
+            third=-(nums[i]+nums[j]);
+            if(hash.find(third)!=hash.end()){
+                vector<int> temp={nums[i],nums[j],third};
+                sort(temp.begin(),temp.end());
+                st.insert(temp);
+
+            }
+            hash.insert(nums[j]);
+
+        }
+    }
+    vector<vector<int>> res(st.begin(),st.end());
+    return res;
+}
+
 
 
     int main(){
