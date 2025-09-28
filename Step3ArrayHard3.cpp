@@ -61,7 +61,7 @@ int third=0;
 //Best approach. using 2 pointers
 //T.C-> O(nlog(n)+O(N*N))
 //S.C-> O(no. of unique elems). we do not include the list of vectors because we are using it to just return the answer ..
-vector<vector<int>> threeSum(vector<int>& nums) {
+vector<vector<int>> threeSumOpt(vector<int>& nums) {
         int n=nums.size();
         vector<vector<int>> list;
     sort(nums.begin(),nums.end());
