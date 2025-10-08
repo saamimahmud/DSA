@@ -1,12 +1,18 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 
 using namespace std;
 
+
+
+//bRUTE FORCE : T.C-> O(N^3);
+//S.C-> O(N^2);
 vector<vector<int>> func(vector<int> &nums){
     int n=nums.size();
     vector<vector<int>> result;
     int maxLen=0;
+    int size=0;
 int sum = 0;
     for(int i=0;i<n;i++){
         sum=0;
@@ -18,8 +24,10 @@ int sum = 0;
                 vector<int> temp;
            for(int k=i;k<=j;k++){
             temp.push_back(nums[k]);
+             size=temp.size();
             
            }
+           maxLen=max(size,maxLen);
            result.push_back(temp);
         }
         
@@ -28,6 +36,7 @@ int sum = 0;
        
         
     }
+    cout<<"longest subArray : "<<maxLen<<endl;
     return result;
 }
 
